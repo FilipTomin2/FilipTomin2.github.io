@@ -1,0 +1,535 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+body,html{
+    scroll-behavior: smooth;
+}
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+}
+.banner{
+    width: 100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    width: 85%;
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: height .5s ease;
+}
+.scrolling-active{
+    background-color: #E7F7F7;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+}
+.scrolling-active nav a{
+    color: #777;
+}
+.scrolling-active nav h1{
+    color:#777;
+}
+.logo{
+    color: #fff;
+    width: 350px;
+    cursor:pointer;
+}
+nav ul
+{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    list-style: none;
+    margin:  0 20px;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    color:#E7F7F7;
+    text-transform: uppercase;
+    
+}
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+nav ul li:hover::after{
+    width:100%;
+}
+@media (max-width:450px)
+{
+
+}
+.Titles{
+    width:100%;
+    position: absolute;
+    top: 50%;
+    float: left;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #E7F7F7;
+    
+}
+.Titles h1{
+    font-size: 70px;
+    margin-top: 80px;
+    text-align: center;
+}
+.banner .box{
+    position: absolute;
+    top:95%;
+    left:50%;
+    padding-bottom: 10px;
+    transform: translate(-50%,-50%);
+   
+}
+.banner .box span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform:rotate(45deg);
+    animation: animate 2s infinite;
+    margin: -10px;
+
+}
+.banner .box span:nth-child(1){
+    animation-delay: -0.2s;
+}
+.banner .box span:nth-child(2){
+    animation-delay: -0.4s;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.c1{
+    display: inline-block;
+}
+.c2{
+    display: inline-block;
+}
+.c3{
+    display: inline-block;
+}
+.typingIntro .type{
+    animation-delay: 0.5s;
+    overflow: hidden;
+    font-size: 40px;
+    border-right: 1px solid #009688;
+    animation: blink 0.5s;
+    white-space: nowrap;
+    width:0;
+    animation: typing 1s steps(13, end) forwards;
+}
+.typingIntro .type2{
+    overflow: hidden;
+    border-right: 1px solid #009688;
+    animation: blink 0.5s;
+    font-size: 40px;
+    white-space: nowrap;
+    width: 0;
+    animation:typing 0.5s steps(6, end) forwards;
+    animation-delay: 1s;
+}
+
+.typingIntro .type3{
+    overflow: hidden;
+    border-right: 1px solid #009688;
+    animation: blink 0.5s;
+    font-size: 40px;
+    white-space: nowrap;
+    width: 0;
+    animation:typing 1.25s steps(16, end) forwards;
+    animation-delay: 1.5s;
+}
+@keyframes typing {
+    from {
+        width:0;
+    }
+    to {
+        width:100%;
+    }
+}
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to{
+        border-color: #009688;
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    background-color: #E7F7F7;
+}
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 380px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+                5px 5px 5px rgba(0, 0, 0, 0.05),
+                -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    margin: 15px;
+}
+.container .card .box
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right:20px;
+    bottom:20px;
+    
+    background: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.container .card:hover .box
+{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    
+}
+.container .card .box .content{
+    padding:10px;
+    text-align: center;
+    
+}
+.container .card .box .content h2{
+    position: absolute;
+    top: -10px;
+    right:30px; 
+    font-size: 8em;
+    color:rgba(0,0,0,0.02);
+    transition:0.5s;
+    pointer-events: none;
+    
+    
+}
+.container .card:hover .box .content h2
+{
+    color:rgba(0, 0, 0, 0.05);
+}
+.container .card .box .content h3{
+    font-size: 1.8em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+    padding-bottom: 15px;
+}
+
+.container .card .box .content .icon ion-icon{
+    height: 35px;
+    width: 35px;
+    padding-bottom: 8px;
+}
+
+.container .card .box .content p{
+    font-size: 1em;
+    font-weight: 300;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+.container .card .box .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #03a9f4;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+.container .card:hover .box .content a{
+    background: #3BEAEA;
+
+}
+.container2{
+    max-width: 100%;
+    margin: 0 auto;
+    
+    
+    text-align: center;
+    padding: 40px 0;
+    background-color: #E7F7F7;
+}
+.container2 h1{
+    color:#777;
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 2rem;
+}
+.container2 h2{
+    color:#009688;
+    font-size: 55px;
+    font-weight: 400;
+}
+.image{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.container2 p{
+    font-size: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height: 5rem;
+    color:#777;
+
+}
+.pattern
+{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(pattern.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectionName
+{
+    width:100%;
+    position: absolute;
+    float: left;
+    padding-top: auto;
+    text-align: center;
+    color: #E7F7F7;
+}
+.sectionName h1{
+    font-size: 75px;
+    text-align: center;
+}
+.wrapper h1{
+    font-size:55px;
+    font-weight: 400;
+    color:#009688;
+    text-align: center;
+    padding-top: 25px;
+}
+.wrapper a {
+    list-style: none;
+    margin: 10 px 30px;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px 20px;
+    color: #009688;
+    border: 1px solid #009688;
+    border-radius: 50%;
+    transition: .5s;
+}
+.wrapper a:hover{
+    color: #292929;
+    border: 1px solid #292929;
+    transition: .5s;
+}
+.contact{
+    position:relative;
+    min-height: 65vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #E7F7F7;
+    
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 55px;
+    font-weight: 500;
+    color: #009688;
+    padding: 10px;
+}
+.contact .content p{
+    font-weight: 300;
+    font-size: 22px;
+    color:#777;
+}
+.container3{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.container3 .contactInfo{
+    width:40%;
+    display:flex;
+    flex-direction: column;
+}
+.container3 .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display:flex;
+}
+.container3 .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid black;
+    font-size: 22px;
+}
+.container3 .contactInfo .box .text
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color:#777;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container3 .contactInfo .box .text h3{
+    font-weight: 500;
+    
+    color:#009688
+}
+.contactForm
+{
+    width: 35%;
+    padding: 20px;
+   
+}
+.contactForm h2{
+    font-size: 30px;
+    color:#009688;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position:relative;
+    width: 100;
+    margin-top: 10px;
+    
+}
+.contactForm .inputBox input,.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    background-color: #E7F7F7;
+    border-bottom: 2px solid #009688 ;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left:0;
+    padding:5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #777;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: #009688;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox button[type="submit"]{
+    width: 100px;
+    background:#009688 ;
+    color:#fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media (max-width:991px){
+    .contact{
+        padding: 50px;
+    }
+    .container, .container2, .container3{
+        flex-direction: column;
+    }
+}
+.createdby{
+    align-items: center;
+    justify-content: center;
+    padding-left: auto;
+    padding-right: auto;
+    
+}
+.createdby p{
+    padding-top:30px;
+    text-align:center;
+    
+    color: #777;
+}
+.services, .about, .contact{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+label #btn,
+label #cancel{
+    color:white;
+    font-size: 30px;
+    float:right;
+    line-height: 80px;
+    margin-right:40px;
+    cursor: pointer;
+    display: none;
+}
+
+
