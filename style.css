@@ -558,8 +558,8 @@ img{
 .createdby p{
     padding-top:30px;
     text-align:center;
-    
-    color: #777;
+    font-size: 18px;
+    color:#fff;
 }
 .services, .about, .contact{
     position: relative;
