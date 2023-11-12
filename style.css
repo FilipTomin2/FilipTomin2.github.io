@@ -547,6 +547,12 @@ img{
     .container, .container2, .container3{
         flex-direction: column;
     }
+    .contactInfo{
+        width: 80%;
+    }
+    .contactForm{
+        width: 80%;
+    }
 }
 .createdby{
     align-items: center;
