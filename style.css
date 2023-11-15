@@ -591,5 +591,14 @@ label #cancel{
     cursor: pointer;
     display: none;
 }
-
+.reveal{
+    position: relative;
+    transform: translateY(125px);
+    opacity: 0;
+    transition: 1.5s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
 

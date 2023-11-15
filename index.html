@@ -46,10 +46,10 @@
         
         
     <div class="about-section"> 
-        <div class="image-section">
+        <div class="image-section reveal">
             <img src="about-img.jpg">
         </div>
-        <div class="text-section">
+        <div class="text-section reveal">
             <h2>O nás</h2>
             <p>FaWhe je česká firma zaměřená na výrobu a prodej speciálních elektrických vozíčku, které pomohou fyzicky postiženým osobám k zlepšení kvality jejich života. Naše Elektrické vozíčky jsou kompromisem mezi klasickým neelektrickým vozíčkem a plně elektrickým vozíčkem. Cena našeho elektrického vozíku je "25000 Kč" a je tak levnější alternativou pro plně elektrický vozík. Pokud máte zájem o koupi našeho elektrického vozíku, tak neváhejte kliknout na tlačítko "Objednat"!</p>
             <a href="#" class="submit-b">Objednat</a>
@@ -128,5 +128,19 @@
             let windowPosition = window.scrollY > 0;
             header.classList.toggle('scrolling-active', windowPosition);
         })
+        window.addEventListener('scroll', reveal);
+            function reveal(){
+                var reveals = document.querySelectorAll('.reveal');
+
+                for(var i = 0; i < reveals.length; i++){
+                    var windowheight = window.innerHeight;
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 120;
+                    if(revealtop < windowheight - revealpoint){
+                        reveals[i].classList.add('active');
+                    }
+                    
+                }
+            }
     </script>
 </body>
