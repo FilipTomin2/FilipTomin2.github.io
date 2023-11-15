@@ -35,7 +35,7 @@ nav{
 }
 .scrolling-active{
     background-color: #fff;
-    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+    box-shadow: 0px 0px 34px 4px #ffdcdc;
 }
 .scrolling-active nav a{
     color:#d60000;
@@ -370,7 +370,7 @@ nav ul li:hover::after{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ffdcdc;
+    background-color: #fff;
     flex-wrap: wrap;
     padding: 50px;
 }
@@ -381,7 +381,10 @@ nav ul li:hover::after{
 }
 .text-section{
     flex:1;
-    padding: 10px;
+    padding: 25px;
+    background-color: #ffdcdc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 34px 4px #ffdcdc;
 }
 .text-section p{
     padding-bottom: 20px;
@@ -391,9 +394,11 @@ nav ul li:hover::after{
     color:#d60000;
     padding-bottom: 10px;
 }
-img{
+.image-section img{
     max-width: 90%;
     height:auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 34px 4px #ffdcdc;
 }
 .submit-b{
     font-size: 20px;
@@ -422,7 +427,7 @@ img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #ffdcdc;
+    background-color: #fff;
     
 }
 .contact .content{
@@ -445,6 +450,9 @@ img{
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 34px 4px #ffdcdc;
+    background-color: #ffdcdc;
 
 }
 .container3 .contactInfo{
@@ -565,7 +573,7 @@ img{
     padding-top:30px;
     text-align:center;
     font-size: 18px;
-    color:#fff;
+    color: #ffdcdc;
 }
 .services, .about, .contact{
     position: relative;
